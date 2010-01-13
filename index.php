@@ -153,6 +153,11 @@ h1 a{text-decoration:none; color: #0000AA;}
 			else {
 				?>Oops! File not found. <a href="index.php">Back to blog</a>.<?php
 			}
+			else
+			{
+				Header("HTTP/1.0 404 Not Found");
+				echo "404 - Not Found";
+			}
 		}
 		else { // Homepage
 			$all_posts = ""; // Might want to limit it to most recent 5 or so posts.
